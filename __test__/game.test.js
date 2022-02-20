@@ -3,8 +3,8 @@ const fs = require('fs')
 
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
-    const Received = fs.readFileSync('./public/main.js', 'utf8')
-    expect(Received).toMatchSnapshot()
+    const data = fs.readFileSync('./public/main.js', 'utf8')
+    expect(data).toMatchSnapshot()
   })
 })
 
